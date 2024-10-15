@@ -1,0 +1,141 @@
+*{/*Aqui estan los estilos generales*/
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.rubik-001 {/*Estilos de las fonts de google*/
+  font-family: "Rubik", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300px;
+  font-style: normal;
+  font-size: 17px;
+  text-transform: uppercase;
+}
+.navbar{/*Estilos para la parte de afuera de la barra de navegacion*/
+    display: flex;/*Puse flex para que se acomode uno al lado del otro*/
+    flex-flow: row; /*Flex flow es direccion y wrap o no*/
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center; /*se alina items forma vertical*/
+    height: 90px;/*Altura estatica*/
+    /*para que los elemento se separen*/
+    background-color: #D5DBDB;/*Color del fondo de la barra*/
+    border-radius: 0 0 20px 20px; /*boder inferior izquierdo y derecho*/
+    position: fixed;
+    z-index: 1;
+    justify-content: center;
+
+}
+.nav-social{
+    margin: 0 1rem 0 1rem;
+    max-width: max-content;
+}
+.navbar-link{/*Aqui enta los estilos de la lista*/
+    list-style: none;/*Quite todos los estilos de una lista*/
+    display: flex;/*ubique los link de forma horizontal*/
+    align-items: center;/*se alina items forma vertical del la lista*/
+    margin-right: 1rem;
+    transition: all 0.8s;
+}
+.navbar-item{
+    margin: 0.8vw;/*Aqui separe todos los elementos de la lista*/
+    transition: all 0.8s;
+}
+.navbar-item>a{
+    text-decoration: none;/*Se le quita la decoracion a los links*/
+    color: black;/*Cambiar el color de los links*/
+}
+.buscar-pro{/*Estilos del buscar*/
+    border-radius: 10px;/*brpode del buscar*/
+    border: 0.1px solid #1C2833;/* ajuste del border*/
+    height: 1.9rem; /*Alto de este mismo*/
+    width: 21rem; /*ancho de este*/
+    padding: 1vw 3vw; /*margen interno*/
+    background-color: #F4F6F6;
+}
+.buscar-pro:focus{ /*cuando se este escribiendo se coloque mas claro*/
+    background-color: white; /*cambiar el clor de fondo*/
+    border-color: #17202A;/* bmacia el color del borde*/
+    transition: all 2s; /*animacon del cambio*/
+}
+
+.social-img{ /*Estilos para la imganes de las redes sociales*/
+    width: 3vw;
+    margin: 0 0.5rem;
+}
+form{
+    position: relative;
+}
+form>i{ /*estilos icono bsuqueda*/
+    position: absolute;
+    top: .5rem;
+    left: .5rem;
+}
+.boton-item{ /*Estilos de los iconos generales*/
+    color: black;
+    margin: 1.5rem;
+    transition: all 0.8s;
+}
+.navbar-hid{/*Elementos de el boton escondido*/
+    padding: 2rem 1rem;
+    width: 100%;
+    display: flex;
+    justify-content: end;
+    display: none;
+    cursor: pointer;
+}
+.social-img:hover, .navbar-item:hover{
+    padding: 10px 5px 20px 5px;
+    background-color: #F4F6F6;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+.boton-item:hover{
+    padding: 20px 10px 20px 10px;
+    background-color: #F4F6F6;
+    border-radius: 20px;
+    transition: all 0.5s;
+}
+
+/*Cambio para pantalla mas pequeñas*/
+@media (max-width: 768px) {
+    .navbar-hid{
+        background-color: #D5DBDB;
+    }
+    .navbar{/*descativa el menu para activarlo con el boton*/
+        position: relative;
+        left: 0;
+        transition: left 0.3s linear 0.2s;
+        background-color: #D5DBDB;
+        overflow-y: auto;
+        height: 100%;;
+    }
+    .visible{
+        left: 0;
+    }
+    .navbar-hid,.navbar-x{ /*aparicion del boton escondido*/
+        display: flex;
+    }
+    .navbar,.navbar-link{/*Cambio la direccion de estos a columnas*/
+        flex-flow: column;
+        margin: 0; /*Maring de ariba y abajo para serpara verticalmente*/
+    }
+    .buscar-pro{ /*Ajuste a para la lupa de navegacion*/
+        padding: 1vw 8vw;
+    }
+    .social-img{ /*ajuste para los links de redes sociales*/
+        width: 2rem;
+        padding: 1rem 0;
+    }
+    .nav-botons,.nav-shop-car{ /*ajuste para los iconos de registro y carrito*/
+        margin: 0.9rem;
+    }
+    .rubik-001{ /*ajuste tamaño de fuente*/ 
+        font-size: 18px;
+    }
+}
+
+
+
+

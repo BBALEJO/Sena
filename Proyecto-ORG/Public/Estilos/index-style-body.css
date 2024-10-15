@@ -1,0 +1,160 @@
+.main{ /*dentro del body main es el principal*/
+    position: relative;
+    top: 100px;
+    z-index: -2;/*paa que se spare de la barra*/
+    display: block;
+}
+body{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+body::before{
+    content: " ";
+    position: absolute;
+    background-image: url(../Imagenes/fondo.jpg);
+    background-size: auto;
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    opacity: 0.4;
+}
+.section-1{ /* section 1 o anuncio*/
+    width: 90%;
+    margin: 0 auto;
+}
+.section-item{ /*Elemento anuncio o contenedor*/
+    width: 100%; /*ancho maximo*/
+    border: 0.2rem solid #17202A;/* borde*/
+    border-radius: 1.8rem;
+    display: flex; /*disposicion de los elemntos dentro*/
+    flex-flow: row,wrap;/*direciion y agrupacion*/
+    height: 28rem; /*altura*/
+    align-items: center; /*alinear verticalmente*/
+    background-color: #2471A3;
+    position: relative;
+    top: 70px;
+}
+.section-img{ /*estilos de la imagen*/
+    position: relative;
+    width: 70dvh; 
+    height: 43dvh;
+    border-radius: 4rem;
+    margin: 0 auto;
+}
+.section-item-001{ /*letra del anuncio*/
+    margin-left: 1rem; /*ajuste lateralmente*/
+    margin-right: 1rem;
+    padding-right: 5rem;
+}
+.section-item-001 span{ /*Estilos para la letras*/
+    color: white;
+    font-size: 2vw;
+}
+.section-item-001 button{ /*estilos para el boton*/
+    margin: 1.8rem; /* separarlo*/
+    height: 2.7rem; /* altura interna*/
+    width: 8rem; /*hancho interno*/
+    border-radius: 1rem;
+    border: 0.2px solid #17202A;
+    background-color: #C30000;
+    color: aliceblue;
+}
+/* aqui esta cuando se le pasa el click que quiero que haga */
+.section-item-001 button:hover{ 
+    cursor: pointer;
+    background-color: #B00000;
+    transition: background-color 0.2s;
+}
+/* aqui cuando se active o se use */
+.section-item-001 button:active{
+    opacity: 0.9;
+    border: 1px solid black;
+}
+/* para la parte de las promociones */
+.section-2,.section-3{
+    margin: 30px 0;
+    width: 100%;
+    text-align: center;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+/* estilos del txto de promociones */
+.section-2 span{
+    font-size: 3vw;
+}
+/* estilos contenedor de elemntos */
+.section-2-item{
+    display: flex;
+    align-items: stretch;
+    flex-flow: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+/* esilos de los elemntos contenidos */
+.a-item-item{
+    width: 25%;
+    position: relative;
+    background-color: white; /*colo de fono*/
+    margin: 15px 10px;
+    padding: 20px 10px 0;
+    border-radius: 20px;
+    min-width: 220px;
+    min-height: 620px;
+}
+/* estilos para cada titulo de ensalda */
+.a-item-item h1{
+    font-display: flex;
+    text-wrap:wrap ;
+    width: 100%;
+}
+/* aqui se especifica la imgane cuando ocupa */
+.section2-item-img{
+    height: 65%; /*altura para todas la imagenes del 65% de 620px*/
+    width: auto;
+    margin-bottom: 0px;
+    border: 0.4px solid grey;
+    max-width: calc(65%);
+}
+/* esilos de los bonotes */
+.section2-item-btn{
+    margin: 10px 0;
+    border-radius: 7px;
+    border: none;
+    background-color: #2471A3;
+    padding: 3px 5px;
+    color: aliceblue;
+    height: 2rem;
+}
+.section-3{
+    width: 100%;
+    height: 100%;
+}
+.section-3 h1{
+    margin: 20px;
+}
+.section-3-pts{
+    background-color: white;
+    height: 200px;
+}
+
+/*estilos para moviles*/
+@media (max-width: 768px) {
+    body{
+        overflow-x: hidden; /*ocultar cuando se corre totalmente a la izquierda*/
+    }
+    .section-img{
+        width: 30vw;
+        border-radius: 1rem;
+        margin: 0;
+    }
+    .section-item-001{
+        padding: 0;
+        margin: 0;
+
+    }
+    .main{
+        top: -400px;
+    }
+}

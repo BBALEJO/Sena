@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Las Uvas Azules</title>
+
+    <link rel="shortcut icon" style="width: 200%;" href="Imagenes/logo.png" type="image/x-icon">
+    <script defer src="Public/JavaS/Script.js"></script>
+    <link rel="stylesheet" href="Public/Estilos/index-style-barra.css">
+    <link rel="stylesheet" href="Public/Estilos/index-style-body.css">
+    <!--  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+    <!--  -->
+    <script src="https://kit.fontawesome.com/9617c053fe.js" crossorigin="anonymous"></script>
+
+</head>
+<div class="box">
+<body>
+    <!--aqui esta la cabecera de nuestro proyecto-->
+    <header class="header rubik-001">
+        <!-- este es un elemento de la cabecera y es la barra de navegacion-->
+         <!--menu de navegacion escondido-->
+        <div class="navbar-hid">
+          <i class="fa-solid fa-bars fa-2xl"></i>
+         </div>
+         <!-- toda la navbar que se esconde y desplega-->
+        <div class="navbar">
+            <ul class="navbar-link">
+                <!--elementos de la barra de navegacion-->
+                <li class="navbar-item"><a href="index.html">Incio</a></li>
+                <li class="navbar-item"><a href="#productos">Productos</a></li>
+                <li class="navbar-item"><a href="#ofertas">Ofertas</a></li>
+            </ul>
+            <!-- aqui esta la barra de busquedacon formulario para enviar la informacion-->
+            <form action="/buscar" method="get" class="nav-buscar">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" name="" id="" value="" placeholder="Buscar productos.." class="buscar-pro">
+            </form>
+            <!-- Redes sociales-->
+             <div class="nav-social">
+                <a class="social-item" href="https://www.facebook.com/"><img src="Public/Imagenes/face.png" alt="Facebook" class="social-img"></a>
+                <a class="social-item" href="https://www.instagram.com/"><img src="Public/Imagenes/instagram.png" alt="Instagram" class="social-img"></a>
+             </div>
+             <!-- botones para el usuario -->
+              <div class="nav-botons">
+                <!-- icono de login -->
+                <a class="boton-item" href="Src/Usuarios/Vista/login.php"><i class=" fa-solid fa-right-to-bracket fa-2xl"></i></a>
+              </div>
+        </div>
+    </header>
+    <!-- parte sentral de la pag -->
+    <main class="main">
+        <!-- seccion 1 aunucion de promocions y comprar ahora -->
+        <section class="section-1 rubik-001">
+            <!-- el anuncion -->
+            <article class="section-item">
+                <!-- img de este -->
+                <img src="Public/Imagenes/back.jpg" alt="" class="section-img">
+                <!-- titulo de este con boton de compra -->
+               <div class="section-item-001">
+                <span>Aprovecha las ofertas!!</span><br>
+                <button ><a style="color: white;text-decoration: none;" href="Src/Usuarios/Vista/login.php">Pide Ahora</a></button>
+               </div>
+            </article>
+        </section>
+        <!-- seccion 2 promociones del dia de hoy -->
+        <section id="ofertas" class="section-2 rubik-001">
+            <!-- titulo -->
+            <span>Promociones de hoy!</span>
+            <!-- contenedor de los productos en promocion -->
+            <article class="section-2-item">
+                <!-- contenedo individual de cada producto -->
+                <div class="a-item-item">
+                    <!-- especificaciones de cada producto en promocion -->
+                    <h1>Yo</h1><br>
+                    <img class="section2-item-img" src="Public/Imagenes/b.jpg" alt="Imagen ensalda"><br>
+                    <button class="section2-item-btn"><a style="color: white;text-decoration: none;" href="Src/Usuarios/Vista/login.php">Comprar Ahora</a></button><br>
+                </div>
+                <!-- segunda tarjeta de promo -->
+                <div class="a-item-item">
+                    <!-- especificaciones de cada producto en promocion -->
+                    <h1>Breiner</h1><br>
+                    <img class="section2-item-img" src="Public/Imagenes/a.jpg" alt="Imagen ensalda"><br>
+                    <button class="section2-item-btn"><a style="color: white;text-decoration: none;" href="Src/Usuarios/Vista/login.php">Comprar Ahora</a></button><br>
+                </div>
+                <div class="a-item-item">
+                    <!-- especificaciones de cada producto en promocion -->
+                    <h1>Nombre</h1><br>
+                    <img class="section2-item-img" src="Public/Imagenes/c.jpg" alt="Imagen ensalda"><br>
+                    <button class="section2-item-btn"><a style="color: white;text-decoration: none;" href="Src/Usuarios/Vista/login.php">Comprar Ahora</a></button><br>
+                </div>
+                <div class="a-item-item">
+                    <!-- especificaciones de cada producto en promocion -->
+                    <h1>Nombre</h1><br>
+                    <img class="section2-item-img" src="Public/Imagenes/comida.png" alt="Imagen ensalda"><br>
+                    <button class="section2-item-btn"><a style="color: white;text-decoration: none;" href="Src/Usuarios/Vista/login.php">Comprar Ahora</a></button><br>
+                </div>
+            </article>
+            <!-- seccion 3 productos disponibles -->
+             <section id="productos" class="section-3 rubik-001">
+                <h1>Productos</h1>
+                <!-- contenedor de los productos -->
+                <article class="section-3-pts">
+                </article>
+             </section>
+        </section>
+    </main>
+</body>
+</div>
+</html>
